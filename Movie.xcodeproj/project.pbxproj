@@ -95,12 +95,12 @@
 		CE8A66C724AA49DB00ECA454 /* Page */ = {
 			isa = PBXGroup;
 			children = (
-				CE8A66C824AA49E500ECA454 /* Home */,
+				CE8A66C824AA49E500ECA454 /* Content */,
 			);
 			path = Page;
 			sourceTree = "<group>";
 		};
-		CE8A66C824AA49E500ECA454 /* Home */ = {
+		CE8A66C824AA49E500ECA454 /* Content */ = {
 			isa = PBXGroup;
 			children = (
 				CE8BAA3124ABC724003B88FE /* ListDataResponse.swift */,
@@ -108,7 +108,7 @@
 				CE8BAA2724AB4631003B88FE /* ContentModel.swift */,
 				CE8BAA2924AB47C2003B88FE /* ContentViewModel.swift */,
 			);
-			path = Home;
+			path = Content;
 			sourceTree = "<group>";
 		};
 		CE8BAA2B24ABC542003B88FE /* Network */ = {

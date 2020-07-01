@@ -49,7 +49,6 @@ class ContentViewModel: ObservableObject {
     }
     
     
-    //MARK: - Access to the model
     var cards: Array<ContentModel<CardModel, String, APIPath>.Card> {
         return model.cards
     }
@@ -58,7 +57,6 @@ class ContentViewModel: ObservableObject {
         return model.categories
     }
     
-    //MARK: - Intent
     func choose(card: ContentModel<CardModel, String, APIPath>.Card) {
         model.choose(card: card)
     }
