@@ -13,7 +13,6 @@ struct ContentModel<CardContent, Categories, SearchPath> {
     var categories: Array<Category>
     
     mutating func choose(card: Card){
-        print("card choosen: \(card)")
         let choosenIndex: Int = self.index(of: card)
         self.cards[choosenIndex].isChangeCard = !self.cards[choosenIndex].isChangeCard
     }

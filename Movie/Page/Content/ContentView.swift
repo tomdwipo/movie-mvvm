@@ -10,7 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: ContentViewModel
-    
+    @State var showingDetail = false
+
     var body: some View {
         NavigationView {
             VStack {
@@ -26,7 +27,7 @@ struct ContentView: View {
                 }) {
                     Text("Category").font(Font.body)
                 }
-               
+                
             }
             .navigationBarTitle("Movie DB")
             .navigationBarItems(trailing: addButton)
@@ -34,7 +35,14 @@ struct ContentView: View {
     }
     
     private var addButton: some View {
-        Button(action: {  }) { Image(systemName: "heart.fill").foregroundColor(.red) }
+        
+        Button(action: {
+            self.showingDetail = true
+        }) {
+            Image(systemName: "heart.fill").foregroundColor(.red)
+        }.sheet(isPresented: $showingDetail) {
+            CardView(card: self.viewModel.cards[0], viewModel: self.viewModel)
+        }
     }
     
     
@@ -55,7 +63,7 @@ struct ListView: View {
                         CardView(card: card, viewModel: self.viewModel)
                     }
                     
-
+                    
                 }
             }
             .frame(width: widthStack)
@@ -88,7 +96,7 @@ struct CardView: View {
     var card: ContentModel<CardModel, String, APIPath>.Card
     var isShowFav: Bool = false
     @ObservedObject var viewModel: ContentViewModel
-
+    
     var body: some View {
         self.cardBody()
     }
@@ -102,7 +110,7 @@ struct CardView: View {
             .foregroundColor(Color.black)
             .padding()
             
-        
+            
             RoundedRectangle(cornerRadius: cornerRadius).stroke()
             
         }
@@ -138,8 +146,6 @@ struct CardView: View {
                     
                 }
             }
-            
-            
         }
     }
 }
