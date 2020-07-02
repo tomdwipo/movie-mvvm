@@ -8,9 +8,6 @@ Movie MVVM is an iOS Apps with simple MVVM architecture + SwiftUI & Combine Feat
 
 Movie MVVM use xcode to build with minimum 13.0 iOS Version for build because swiftui and combine.
 
-### MVVM Architecture
-![alt text](https://github.com/tommyputranto/movie-mvvm/blob/master/achitecture.png?raw=true)
-
 
 License
 ----
